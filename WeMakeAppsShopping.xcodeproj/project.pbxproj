@@ -21,6 +21,7 @@
 		928FB65E1AF9AD61006ED4A9 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 928FB65B1AF9AD61006ED4A9 /* Product.m */; };
 		928FB6641AFAD1F4006ED4A9 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 928FB6631AFAD1F4006ED4A9 /* ProductTableViewCell.m */; };
 		928FB66B1AFAF3AD006ED4A9 /* TextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 928FB66A1AFAF3AD006ED4A9 /* TextFieldTableViewCell.m */; };
+		928FB66E1AFB130F006ED4A9 /* LoadingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 928FB66D1AFB130F006ED4A9 /* LoadingScreen.m */; };
 		FBC846086E6A5796E266A540 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E55EE854FB562CCEAC1176 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		928FB6631AFAD1F4006ED4A9 /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
 		928FB6691AFAF3AD006ED4A9 /* TextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldTableViewCell.h; sourceTree = "<group>"; };
 		928FB66A1AFAF3AD006ED4A9 /* TextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldTableViewCell.m; sourceTree = "<group>"; };
+		928FB66C1AFB130F006ED4A9 /* LoadingScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreen.h; sourceTree = "<group>"; };
+		928FB66D1AFB130F006ED4A9 /* LoadingScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 				923FF6721AF8A2D80049BF5E /* MasterViewController.m */,
 				923FF6741AF8A2D80049BF5E /* DetailViewController.h */,
 				923FF6751AF8A2D80049BF5E /* DetailViewController.m */,
+				928FB66C1AFB130F006ED4A9 /* LoadingScreen.h */,
+				928FB66D1AFB130F006ED4A9 /* LoadingScreen.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				928FB65E1AF9AD61006ED4A9 /* Product.m in Sources */,
 				923FF6731AF8A2D80049BF5E /* MasterViewController.m in Sources */,
 				928FB6551AF9AA0E006ED4A9 /* DataManager.m in Sources */,
+				928FB66E1AFB130F006ED4A9 /* LoadingScreen.m in Sources */,
 				923FF66D1AF8A2D80049BF5E /* main.m in Sources */,
 				928FB66B1AFAF3AD006ED4A9 /* TextFieldTableViewCell.m in Sources */,
 				923FF6761AF8A2D80049BF5E /* DetailViewController.m in Sources */,

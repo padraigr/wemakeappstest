@@ -41,12 +41,12 @@
 - (void)createProducts:(NSArray *)products completion:(void (^)())completion{
     // Take only the first 8 items, because I am too lazy to find a more efficient way given there is no chance of the data changing.
     products = [products subarrayWithRange:NSMakeRange(0, 7)];
-    
-    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-        [Product MR_importFromArray:products];
-    } completion:^(BOOL success, NSError *error) {
-        completion();
-    }];
+    NSManagedObjectContext *defaultContext = [NSManagedObjectContext MR_defaultContext];
+    for (NSDictionary *productDict in products) {
+        Product *product = [Product MR_importFromObject:productDict];
+    }
+    [defaultContext save:nil];
+    completion();
 }
 
 @end

@@ -10,10 +10,10 @@
 #import "ProductTableViewCell.h"
 #import "DetailViewController.h"
 #import <NSManagedObject+MagicalFinders.h>
-#import "DataManager.h"
 #import <CoreData+MagicalRecord.h>
 #import "Product.h"
 #import "Seller.h"
+#import "LoadingScreen.h"
 
 @interface MasterViewController ()
 
@@ -23,24 +23,17 @@
 
 @implementation MasterViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    __block MasterViewController *weakSelf = self;
+    void(^completion)() = ^() {
+        // Retrieve all products and reload the table data.
+        weakSelf.products = [Product MR_findAllSortedBy:@"title" ascending:YES];
+        [weakSelf.tableView reloadData];
+    };
+    [self.navigationController pushViewController:[[LoadingScreen alloc] initWithCompletion:completion] animated:NO];
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [activityIndicator startAnimating];
-    [self.view addSubview:activityIndicator];
-    
-    if (!self.products.count) {
-        [[DataManager sharedManager] importDataWithCompletion:^{
-            [activityIndicator removeFromSuperview];
-            
-            // Retrieve all products.
-            self.products = [Product MR_findAllSortedBy:@"title" ascending:YES];
-            [self.tableView reloadData];
-            [activityIndicator stopAnimating];
-            [activityIndicator removeFromSuperview];
-        }];
-    }
 }
 
 #pragma mark - Segues

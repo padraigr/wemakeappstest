@@ -15,12 +15,12 @@
                         <color key="barTintColor" red="0.21972367100000001" green="0.56296726509999995" blue="0.74548998990000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
+                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="iMn-Zo-HVg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78.933333333333337" y="60.586666666666666"/>
+            <point key="canvasLocation" x="-128" y="60"/>
         </scene>
         <!--Master-->
         <scene sceneID="VgW-fR-Quf">
