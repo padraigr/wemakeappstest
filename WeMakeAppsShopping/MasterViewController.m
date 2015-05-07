@@ -13,7 +13,7 @@
 #import <CoreData+MagicalRecord.h>
 #import "Product.h"
 #import "Seller.h"
-#import "LoadingScreen.h"
+#import "CustomLoadingScreen.h"
 
 @interface MasterViewController ()
 
@@ -32,7 +32,7 @@
         weakSelf.products = [Product MR_findAllSortedBy:@"title" ascending:YES];
         [weakSelf.tableView reloadData];
     };
-    [self.navigationController pushViewController:[[LoadingScreen alloc] initWithCompletion:completion] animated:NO];
+    [self.navigationController pushViewController:[[CustomLoadingScreen alloc] initWithCompletion:completion] animated:NO];
     
 }
 

@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 Outworld Designs. All rights reserved.
 //
 
-#import "LoadingScreen.h"
+#import "CustomLoadingScreen.h"
 #import "DataManager.h"
 
-@interface LoadingScreen()
+@interface CustomLoadingScreen()
 
 @property (nonatomic, copy) void (^completion)();
 
 @end
 
-@implementation LoadingScreen
+@implementation CustomLoadingScreen
 
 - (instancetype)initWithCompletion:(void (^)())completion {
     self = [super init];
@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [activityIndicator startAnimating];
     [self.view addSubview:activityIndicator];

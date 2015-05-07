@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoadingScreen : UIViewController
+@interface CustomLoadingScreen : UIViewController
 
 - (instancetype)initWithCompletion:(void (^)())completion;
 
