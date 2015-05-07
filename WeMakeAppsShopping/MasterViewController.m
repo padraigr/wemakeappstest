@@ -7,7 +7,6 @@
 //
 
 #import "MasterViewController.h"
-#import "MasterViewDataSource.h"
 #import "ProductTableViewCell.h"
 #import "DetailViewController.h"
 #import <NSManagedObject+MagicalFinders.h>
