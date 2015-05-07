@@ -10,6 +10,11 @@
 
 @interface TextFieldTableViewCell : UITableViewCell
 
+/**
+ *  Set the product description text to be shown in this cell.
+ *
+ *  @param productDescription The product description string.
+ */
 - (void)setProductDescription:(NSString *)productDescription;
 
 @end

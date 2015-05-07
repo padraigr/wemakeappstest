@@ -11,6 +11,9 @@
 
 @interface DetailViewController : UITableViewController
 
+/**
+ *  The product that the page will show details for.
+ */
 @property (strong, nonatomic) Product *product;
 
 @end

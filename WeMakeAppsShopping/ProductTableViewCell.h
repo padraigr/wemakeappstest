@@ -14,6 +14,14 @@
 @property (nonatomic, strong) NSString *sizes;
 @property (nonatomic, strong) UIImage  *image;
 
+
+/**
+ *  Configure the cell with a title, price and image url.
+ *
+ *  @param title     The title of the product.
+ *  @param price     The price of the product.
+ *  @param urlString The image url of the product.
+ */
 - (void)configureCellWithTitle:(NSString *)title
                       andPrice:(NSNumber *)price
                       andURLString:(NSString *)urlString;

@@ -15,7 +15,6 @@
 		923FF67B1AF8A2D80049BF5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923FF67A1AF8A2D80049BF5E /* Images.xcassets */; };
 		923FF67E1AF8A2D80049BF5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923FF67C1AF8A2D80049BF5E /* LaunchScreen.xib */; };
 		923FF68A1AF8A2D80049BF5E /* WeMakeAppsShoppingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 923FF6891AF8A2D80049BF5E /* WeMakeAppsShoppingTests.m */; };
-		928FB64F1AF8A61A006ED4A9 /* MasterViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 928FB64E1AF8A61A006ED4A9 /* MasterViewDataSource.m */; };
 		928FB6521AF9A0AF006ED4A9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 928FB6501AF9A0AF006ED4A9 /* Model.xcdatamodeld */; };
 		928FB6551AF9AA0E006ED4A9 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 928FB6541AF9AA0E006ED4A9 /* DataManager.m */; };
 		928FB65D1AF9AD61006ED4A9 /* Seller.m in Sources */ = {isa = PBXBuildFile; fileRef = 928FB6591AF9AD61006ED4A9 /* Seller.m */; };
@@ -54,8 +53,6 @@
 		923FF6831AF8A2D80049BF5E /* WeMakeAppsShoppingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeMakeAppsShoppingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		923FF6881AF8A2D80049BF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		923FF6891AF8A2D80049BF5E /* WeMakeAppsShoppingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeMakeAppsShoppingTests.m; sourceTree = "<group>"; };
-		928FB64D1AF8A61A006ED4A9 /* MasterViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewDataSource.h; sourceTree = "<group>"; };
-		928FB64E1AF8A61A006ED4A9 /* MasterViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewDataSource.m; sourceTree = "<group>"; };
 		928FB6511AF9A0AF006ED4A9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		928FB6531AF9AA0E006ED4A9 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		928FB6541AF9AA0E006ED4A9 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
@@ -133,8 +130,6 @@
 				928FB65F1AF9AD6D006ED4A9 /* Model */,
 				923FF66E1AF8A2D80049BF5E /* AppDelegate.h */,
 				923FF66F1AF8A2D80049BF5E /* AppDelegate.m */,
-				928FB64D1AF8A61A006ED4A9 /* MasterViewDataSource.h */,
-				928FB64E1AF8A61A006ED4A9 /* MasterViewDataSource.m */,
 				923FF67A1AF8A2D80049BF5E /* Images.xcassets */,
 				923FF66A1AF8A2D80049BF5E /* Supporting Files */,
 			);
@@ -344,7 +339,6 @@
 				928FB65E1AF9AD61006ED4A9 /* Product.m in Sources */,
 				923FF6731AF8A2D80049BF5E /* MasterViewController.m in Sources */,
 				928FB6551AF9AA0E006ED4A9 /* DataManager.m in Sources */,
-				928FB64F1AF8A61A006ED4A9 /* MasterViewDataSource.m in Sources */,
 				923FF66D1AF8A2D80049BF5E /* main.m in Sources */,
 				928FB66B1AFAF3AD006ED4A9 /* TextFieldTableViewCell.m in Sources */,
 				923FF6761AF8A2D80049BF5E /* DetailViewController.m in Sources */,
