@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import <CoreData+MagicalRecord.h>
-#import "DataManager.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +20,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Retrieve all data from the remote source, and move it into coredata.
     [MagicalRecord setupCoreDataStack];
-    [[DataManager sharedManager] importData];
     return YES;
 }
 

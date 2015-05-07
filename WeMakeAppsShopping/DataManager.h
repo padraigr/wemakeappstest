@@ -19,6 +19,6 @@
 /**
  *  Import data from the remote URL and store in Core Data.
  */
-- (void)importData;
+- (void)importDataWithCompletion:(void (^)())completion;
 
 @end

@@ -10,13 +10,14 @@
 #import "ProductTableViewCell.h"
 #import "DetailViewController.h"
 #import <NSManagedObject+MagicalFinders.h>
+#import "DataManager.h"
 #import <CoreData+MagicalRecord.h>
 #import "Product.h"
 #import "Seller.h"
 
 @interface MasterViewController ()
 
-@property NSArray        *products;
+@property NSArray  *products;
 
 @end
 
@@ -25,8 +26,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Retrieve all products.
-    self.products = [Product MR_findAllSortedBy:@"title" ascending:YES];
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [activityIndicator startAnimating];
+    [self.view addSubview:activityIndicator];
+    
+    if (!self.products.count) {
+        [[DataManager sharedManager] importDataWithCompletion:^{
+            [activityIndicator removeFromSuperview];
+            
+            // Retrieve all products.
+            self.products = [Product MR_findAllSortedBy:@"title" ascending:YES];
+            [self.tableView reloadData];
+            [activityIndicator stopAnimating];
+            [activityIndicator removeFromSuperview];
+        }];
+    }
 }
 
 #pragma mark - Segues

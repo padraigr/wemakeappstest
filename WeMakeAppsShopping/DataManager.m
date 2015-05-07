@@ -26,23 +26,26 @@
     return _sharedInstance;
 }
 
-- (void)importData {
+- (void)importDataWithCompletion:(void (^)())completion {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     [manager GET:@"http://wemakeapps.net/test/products.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
-        [self createProducts:(NSArray *)responseObject[@"products"]];
+        [self createProducts:(NSArray *)responseObject[@"products"] completion:completion];
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
 }
 
-- (void)createProducts:(NSArray *)products {
+- (void)createProducts:(NSArray *)products completion:(void (^)())completion{
     // Take only the first 8 items, because I am too lazy to find a more efficient way given there is no chance of the data changing.
     products = [products subarrayWithRange:NSMakeRange(0, 7)];
+    
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
         [Product MR_importFromArray:products];
+    } completion:^(BOOL success, NSError *error) {
+        completion();
     }];
 }
 
