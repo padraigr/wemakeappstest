@@ -106,7 +106,7 @@
         {
             NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
             [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
-            height = [self.product.productDescription boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 30, MAXFLOAT)
+            height = [self.product.productDescription boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 50, MAXFLOAT)
                                                                    options:NSStringDrawingUsesLineFragmentOrigin
                                                                 attributes: @{NSFontAttributeName : [UIFont systemFontOfSize:14],
                                                                               NSParagraphStyleAttributeName : paragraphStyle}
